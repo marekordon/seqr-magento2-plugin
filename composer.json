@@ -1,0 +1,17 @@
+{
+    "name": "seqr/plugin",
+    "description": "SEQR Payment plugin for Magento 2",
+    "type": "magento2-module",
+    "version": "dev-master",
+    "license": [
+        "OSL-3.0"
+    ],
+    "extra": {
+        "map": [
+            [
+                "*",
+                "SEQR/Plugin"
+            ]
+        ]
+    }
+}
