@@ -1,0 +1,32 @@
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<li id="opc-seqr" data-bind="fadeVisible: isVisible">
+	<div class="step-title" data-bind="text: 'Step Title'"
+		data-role="title"></div>
+	<div id="checkout-step-title" class="step-content" data-role="content">
+	
+        <div id="checkout-payment-method-load" class="opc-payment" data-bind="visible: true">
+            <!-- ko foreach: getRegion('display-qrcode') -->
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            <!-- /ko -->
+        </div>
+
+		<form data-bind="submit: placeOrder" novalidate="novalidate">
+			<div class="actions-toolbar">
+				<div class="primary">
+					<div id="seqr-code-image"></div>
+
+					<button data-role="opc-continue" type="submit"
+						class="button action continue primary">
+						<span> Place Order </span>
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</li>
