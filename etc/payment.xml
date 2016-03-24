@@ -1,24 +1,21 @@
 <?xml version="1.0"?>
 <!--
 /**
-* SEQR_Plugin default payment configuration
-*
-* @category    SEQR
-* @package     SEQR_Plugin
-* @author      Marek Ordon
-* @copyright   SEQR Poland
-* @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
-*/
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
 -->
-<payment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Payment:etc/payment.xsd">
-    <groups>  
-        <group id="offline">  
-            <label>Offline Payment Methods</label>  
-        </group>  
-    </groups>  
+<payment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../../../Magento/Payment/etc/payment.xsd">
+    <groups>
+        <group id="online">
+            <label>Online Payment Methods</label>
+        </group>
+    </groups>
     <methods>
-        <method name="seqr_plugin">
+        <method name="seqr-payment">
             <allow_multiple_address>1</allow_multiple_address>
         </method>
+        
     </methods>
 </payment>
